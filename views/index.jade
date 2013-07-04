@@ -1,0 +1,28 @@
+!!! 5
+html(ng-app='myApp')
+head
+  title Angular Express Train
+  link(rel='stylesheet', href='/css/style.css')
+  link(rel='stylesheet', href='/css/bootstrap.min.css')
+  body
+    .container
+      .navbar.navbar-inverse
+        .navbar-inner
+          a.brand(ng-href='/') Angular Express Train
+          ul.nav
+            li
+              a(ng-href='/todos', ng-show='user.username') My Todos
+          ul.nav.pull-right
+            li(ng-hide='user.username')
+              a(ng-href='/login') Login/Register
+            li.dropdown(ng-show='user.username')
+              a.dropdown-toggle(href='#', data-toggle='dropdown')
+                | Hello, {{user.username}}
+                b.caret
+              ul.dropdown-menu
+                li
+                  a(ng-click='logout()') Log Out
+    .container(ng-view='ng-view')
+  != js('lib/jquery')
+  != js('lib/bootstrap')
+  != js('app')

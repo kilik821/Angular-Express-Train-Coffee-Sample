@@ -1,0 +1,9 @@
+app/
+builtAssets/
+
+node_modules
+.env.js
+.env.json
+.idea
+npm-debug.log
+.ini

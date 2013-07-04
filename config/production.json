@@ -1,0 +1,13 @@
+{
+    "cookie_secret": "boggle at the situation",
+    "session": {
+        "key": "boggle at the situation",
+        "secret": "boggle at the situation"
+    },
+    "request_timeout": 1000,
+    "port": "{{PORT}}",
+    "mongodb": {
+        "uri": "{{MONGOLAB_URI}}"
+    },
+    "character_encoding": "utf-8"
+}
